@@ -30,6 +30,18 @@ You make new promises using `promiseWithResolverBlock`:
 
 ---
 
+You reject promises by throwing errors:
+
+```objc
+myPromise.then(^{
+    @throw [NSError errorWithDomain:domain code:code userInfo:nil];
+}).catch(^(NSError *error){
+    //…
+});
+```
+
+---
+
 One important feature is the syntactic flexability of your handlers:
 
 ```objc
