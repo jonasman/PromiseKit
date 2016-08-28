@@ -54,7 +54,7 @@ inherits. Saves you effort.
 
 Now set deployment targets for all platforms (use the Build Settings screen).
 
-Now set `TARGETED_DEVICE_FAMILY` to `1,2,3,4`. I don’t know *why* this is required, but otherwise the watchOS framework fails to compile.
+Now set `TARGETED_DEVICE_FAMILY` to `1,2,3,4`. I don’t know *why* this is required, but otherwise the watchOS framework fails to compile. And, annoyingly, the only way you can set this is to edit the `project.pbxproj` file in a text-editor.
 
 That’s it!
 
