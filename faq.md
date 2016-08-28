@@ -47,7 +47,7 @@ Unlike most libraries we have extensive bridging support, you can use PromiseKit
 
 You’re seeing errors like:
 
-> Cannot convert return expression of type `Promise<…>` to return type `AnyPromise`
+> Cannot convert return expression of type `…` to return type `AnyPromise`
 >
 > Missing return in a closure expected to return `AnyPromise`
 
