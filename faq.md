@@ -116,13 +116,15 @@ Your promises have been specifying their queue all along, it was just a hidden d
 [http://blog.izs.me/post/59142742143/designing-apis-for-asynchrony]()
 
 
-## Because PromiseKit always uses `dispatch_async` my backtraces are useless, how can I fix this?
+## Debugging is hard
 
-PromiseKit uses `dispatch_async` for all handlers, this leads to backtraces that
-are less useful.
+Due to promise chaining errors can end up quite far from where they were thrown.
 
-Assuming no other APIs you are wrapping do asynchronicity you can remove the use
-of PromiseKit’s `dispatch_async` by setting the default queue to `zalgo`:
+The best way thus to aid debugging is to throw **really good** errors.
+
+Sadly Cocoa doesn’t throw good errors.
+
+Assuming no other APIs you are wrapping do asynchronicity you can sometimes create a stack trace that helps lead back to the throw site by using `zalgo`:
 
 ```swift
 PMKSetDefaultDispatchQueue(zalgo)
