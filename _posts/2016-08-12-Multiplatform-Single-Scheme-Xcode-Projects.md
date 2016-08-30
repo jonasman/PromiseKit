@@ -52,9 +52,9 @@ Obvious, but I had never tried setting more than one platform here. I quickly op
 Since you want these for all targets, *including test targets*, I suggest adding them to the Project’s settings and then pressing backspace on each target’s supported platforms so it
 inherits. Saves you effort.
 
-Now set deployment targets for all platforms (use the Build Settings screen).
+Now set `TARGETED_DEVICE_FAMILY` to `1,2,3,4`. I don’t know *why* this is required, but otherwise the watchOS and tvOS platforms fail to appear in the device selector. And, annoyingly, the only way you can set this (that I could determine) is to edit the `project.pbxproj` file in a text-editor.
 
-Now set `TARGETED_DEVICE_FAMILY` to `1,2,3,4`. I don’t know *why* this is required, but otherwise the watchOS framework fails to compile. And, annoyingly, the only way you can set this is to edit the `project.pbxproj` file in a text-editor.
+You will probably need to set a deployment target for each platform (use the Build Settings screen).
 
 That’s it!
 
