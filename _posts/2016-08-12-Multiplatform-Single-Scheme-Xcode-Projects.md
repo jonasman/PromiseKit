@@ -41,7 +41,7 @@ The supported platforms setting looked different:
 
 Obvious, but I had never tried setting more than one platform here. I quickly opened `PromiseKit.xcodeproj` and tried to do the same. Naive clicks did nothing, you have to click *“Other”* and then add the following one by one:
 
-* `macosx` *not macOS or OSX or OSten*
+* `macosx` *not macOS or OSX*
 * `iphoneos` *not iOS*
 * `appletvos` *not tvos*
 * `watchos`
